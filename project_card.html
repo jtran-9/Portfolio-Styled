@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="Project Card Component" content="A project card component using semantic css for my projects page">
+        <title>Project Card Component</title>
+        <style>
+            project-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: beige;
+                margin: 2rem;
+            }
+            project-card > img {
+                margin: 1rem 0;
+            }
+
+            project-card[size="big"] {
+                height: 60vh;
+                width: 40vw;
+            }
+
+            project-card[size="big"] > img {
+                height: 30vh;
+                width: 35vw;
+            }
+
+            project-card[size="small"] {
+                height: 30vh;
+                width: 20vw;
+            }
+
+            project-card[size="small"] > img {
+                height: 15vh;
+                width: 17vw;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <project-card card-index="0" size="big">
+                <h3>GeoGuru</h3>
+                <img src="/public/geoguru.png" alt="a thumbnail of the homepage for geoguru">
+                <button>Learn More About GeoGuru</button>
+            </project-card>
+            <project-card card-index="1" size="small">
+                <h3>E-Waste Website</h3>
+                <img src="/public/e-waste.png" alt="a thumbnail of the homepage for my e-waste website">
+                <button>Learn More About E-Waste</button>
+            </project-card>
+        </div>
+    </body>
+</html>
